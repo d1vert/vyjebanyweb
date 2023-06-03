@@ -80,46 +80,23 @@
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
-      // Custom JavaScript
-          $(document).ready(function() {
-      $('nav a').on('click', function(e) {
-        e.preventDefault();
-        var target = $(this).attr('href');
-        if (target === 'services.html') {
-          window.location.href = 'http://parrot.hostify.cz:59842/';
-        } else {
-          $('main').removeClass('show');
-          setTimeout(function() {
-            window.location.href = target;
-          }, 500);
-        }
-      $(document).ready(function() {
-        $('header').on('mouseenter', function() {
-          $(this).addClass('show');
-        }).on('mouseleave', function() {
-          $(this).removeClass('show');
+$(document).ready(function() {
+        $('nav a').on('click', function(e) {
+          e.preventDefault();
+          var target = $(this).attr('href');
+          if (target === 'services.html') {
+            window.location.href = 'http://parrot.hostify.cz:59842/';
+          } else {
+            $('main').removeClass('show');
+            setTimeout(function() {
+              window.location.href = target;
+            }, 500);
+          }
         });
+        setTimeout(function() {
+          $('main').addClass('show');
+        }, 500);
       });
-    </script>
-      <script>
-        // Custom JavaScript
-        $(document).ready(function() {
-          $('nav a').on('click', function(e) {
-            e.preventDefault();
-            var target = $(this).attr('href');
-            if (target === 'about.html') {
-              window.location.href = 'https://platby.hostify.cz/92640';
-            } else {
-              $('main').removeClass('show');
-              setTimeout(function() {
-                window.location.href = target;
-              }, 500);
-            }
-          });
-          setTimeout(function() {
-            $('main').addClass('show');
-          }, 500);
-        });
       </script>
   </head>
   <body>
