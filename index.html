@@ -150,22 +150,6 @@
     <script>
       // Custom JavaScript
       $(document).ready(function() {
-      $('nav a').on('click', function(e) {
-        e.preventDefault();
-        var target = $(this).attr('href');
-        if (target === 'services.html') {
-          window.location.href = 'http://parrot.hostify.cz:59842/';
-        } else {
-          $('main').removeClass('show');
-          setTimeout(function() {
-            window.location.href = target;
-          }, 500);
-        }
-        });
-        setTimeout(function() {
-          $('main').addClass('show');
-        }, 500);
-        $(document).ready(function() {
         $('nav a').on('click', function(e) {
           e.preventDefault();
           var target = $(this).attr('href');
@@ -178,10 +162,11 @@
             }, 500);
           }
         });
+
         setTimeout(function() {
           $('main').addClass('show');
         }, 500);
-      });
+
         // Add click event handler for "Read More" links
         $('.news-item a').on('click', function(e) {
           e.preventDefault();
@@ -218,6 +203,7 @@
             <p>Dnes 4.6 je dňom ktorý sa zapíše do našej histórie...</p>
             <a href="article1.html">Read More</a>
           </div>
+        </div>
       </section>
     </main>
     <footer>
@@ -226,7 +212,7 @@
         <a href="https://www.tiktok.com/@simplesclothing?_t=8crDwmY7PS7&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
       </div>
       <script src="https://kit.fontawesome.com/f0726da535.js" crossorigin="anonymous"></script>
-    <p>&copy; 2023 Trinity Global Inc. All rights reserved.</p>
+      <p>&copy; 2023 Trinity Global Inc. All rights reserved.</p>
       <p>&copy; Made by d1vert</p>
     </footer>
   </body>
