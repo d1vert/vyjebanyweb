@@ -102,6 +102,23 @@
               }, 500);
             }
           });
+        $(document).ready(function() {
+        $('nav a').on('click', function(e) {
+          e.preventDefault();
+          var target = $(this).attr('href');
+          if (target === 'services.html') {
+            window.location.href = 'http://parrot.hostify.cz:59842/';
+          } else {
+            $('main').removeClass('show');
+            setTimeout(function() {
+              window.location.href = target;
+            }, 500);
+          }
+        });
+        setTimeout(function() {
+          $('main').addClass('show');
+        }, 500);
+      });
           setTimeout(function() {
             $('main').addClass('show');
           }, 500);
