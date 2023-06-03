@@ -122,36 +122,20 @@
         $('nav a').on('click', function(e) {
           e.preventDefault();
           var target = $(this).attr('href');
-          $('main').removeClass('show');
-          setTimeout(function() {
-            window.location.href = target;
-          }, 500);
+          if (target === 'about.html') {
+            window.location.href = 'https://platby.hostify.cz/92640';
+          } else {
+            $('main').removeClass('show');
+            setTimeout(function() {
+              window.location.href = target;
+            }, 500);
+          }
         });
         setTimeout(function() {
           $('main').addClass('show');
         }, 500);
       });
     </script>
-      <script>
-        // Custom JavaScript
-        $(document).ready(function() {
-          $('nav a').on('click', function(e) {
-            e.preventDefault();
-            var target = $(this).attr('href');
-            if (target === 'about.html') {
-              window.location.href = 'https://platby.hostify.cz/92640';
-            } else {
-              $('main').removeClass('show');
-              setTimeout(function() {
-                window.location.href = target;
-              }, 500);
-            }
-          });
-          setTimeout(function() {
-            $('main').addClass('show');
-          }, 500);
-        });
-      </script>
   </head>
   <body>
     <header>
@@ -169,7 +153,6 @@
       </nav>
     </header>
     <main>
-      <main class="fade-slide-enter"></main>
       <section id="ateam">
         <h2>Management</h2>
         <p>Váš A-Team</p>
@@ -188,7 +171,7 @@
             <div class="caption">
               <div>Tovijahu</div>
               <div>Kapitán</div>
-              <div>"Head of Marketing and Billboards</div>
+              <div>"Head of Marketing and Billboards"</div>
             </div>
           </div>
           <div class="photo">
