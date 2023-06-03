@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article 1</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+      /* Custom CSS */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Roboto Mono', monospace;
+        background-color: #f0f0f0;
+      }
+      header {
+        background-color: #923F2D;
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .logo-container {
+        position: relative;
+        width: 200px;
+        height: 200px;
+      }
+      .logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 3rem;
+        font-weight: bold;
+        letter-spacing: 0.2rem;
+        text-transform: uppercase;
+        color: #ffffff;
+      }
+      header ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+      }
+      header a {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+        margin: 0 10px;
+      }
+      header a:hover {
+        color: #000000;
+      }
+      h1 {
+        margin: 0;
+      }
+      main {
+        padding: 2rem;
+        opacity: 0;
+        transition: opacity 0.5s, transform 0.5s;
+        transform: translateY(50%);
+      }
+      main.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      article {
+        background-color: #ffffff;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        text-align: justify;
+      }
+      article h2 {
+        margin-top: 0;
+      }
+      .photo-container {
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+      .photo-container img {
+        max-width: 100%;
+        height: auto;
+      }
+      footer {
+        background-color: #923F2D;
+        padding: 1rem;
+        text-align: center;
+        color: #ffffff;
+      }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      // Custom JavaScript
+      $(document).ready(function() {
+        setTimeout(function() {
+          $('main').addClass('show');
+        }, 500);
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <h1 class="logo">Trinity</h1>
+      </div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="ateam.html">Management</a></li>
+      </ul>
+    </header>
+    <main>
+      <article>
+        <h2>Article 1</h2>
+        <div class="photo-container">
+          <img src="path/to/your/image.jpg" alt="Article Photo">
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris iaculis tristique tortor, eget tempor nibh dignissim eu. Integer scelerisque sapien a luctus lobortis. Maecenas consequat mi in mauris placerat, eu sagittis eros rhoncus. Morbi ultricies turpis id finibus fermentum.</p>
+        <p>Sed tincidunt efficitur orci, id interdum velit pulvinar in. Pellentesque gravida dui id dolor efficitur, ac interdum quam molestie. Suspendisse vel tortor consectetur, vestibulum justo sed, luctus orci. Aliquam in dignissim sapien. Morbi sed pellentesque mi, nec congue dolor. Vestibulum et posuere mauris. Proin ullamcorper ex vitae orci dignissim varius.</p>
+        <p>Nullam scelerisque dolor non quam faucibus iaculis. Proin et metus at mauris vulputate volutpat sed nec arcu. Morbi ut feugiat neque. Nullam convallis diam ac urna ullamcorper facilisis. Nullam facilisis nisl quis risus rutrum, sed ultrices tellus tristique. Donec dignissim eu purus nec vestibulum. Ut vitae gravida ex, nec ultrices nulla. Cras eget malesuada lorem. Integer id tristique libero. Donec sollicitudin turpis at risus ultrices cursus. Curabitur a ante urna. Duis pretium dui ac eros euismod eleifend. Curabitur dictum metus sit amet enim fringilla, nec aliquet arcu consequat. Pellentesque eget ex vel enim aliquet pharetra.</p>
+      </article>
+    </main>
+    <footer>
+      <p>&copy; 2023 Trinity Global Inc. All rights reserved.</p>
+      <p>&copy; Made by d1vert</p>
+    </footer>
+  </body>
+</html>

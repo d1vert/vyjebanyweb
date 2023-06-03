@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prvý launch serveru</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+      /* Custom CSS */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Roboto Mono', monospace;
+        background-color: #f0f0f0;
+      }
+      header {
+        background-color: #923F2D;
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .logo-container {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .logo img {
+        width: 100%;
+        height: auto;
+      }
+      header ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+      }
+      header a {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+        margin: 0 10px;
+      }
+      header a:hover {
+        color: #000000;
+      }
+      h1 {
+        margin: 0;
+      }
+      main {
+        padding: 2rem;
+        opacity: 0;
+        transition: opacity 0.5s, transform 0.5s;
+        transform: translateY(50%);
+      }
+      main.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      article {
+        background-color: #ffffff;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        text-align: justify;
+      }
+      article h2 {
+        margin-top: 0;
+        text-align: center; /* Add this line to center-align the title */
+      }
+      .photo-container {
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+      .photo-container img {
+        max-width: 50%; /* Adjust the value as per your preference */
+        height: auto;
+      }
+      footer {
+        background-color: #923F2D;
+        padding: 1rem;
+        text-align: center;
+        color: #ffffff;
+      }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      // Custom JavaScript
+      $(document).ready(function() {
+        setTimeout(function() {
+          $('main').addClass('show');
+        }, 500);
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <div class="logo">
+          <img src="C:\Users\magda\OneDrive\Počítač\Nový priečinok (2)\logo.png" alt="Trinity Logo">
+        </div>
+      </div>
+      <ul>
+        <li><a href="index.html">Domov</a></li>
+        <li><a href="about.html">VIP</a></li>
+        <li><a href="services.html">Dynmapa</a></li>
+        <li><a href="faq.html">F.A.Q</a></li>
+        <li><a href="ateam.html">Management</a></li>
+      </ul>
+    </header>
+    <main>
+      <article>
+        <h2>Prvý launch serveru!!</h2>
+        <div class="photo-container">
+          <img src="C:\Users\magda\OneDrive\Počítač\Nový priečinok (2)\unnamed.png" alt="Article Photo">
+        </div>
+        <p>
+          Dnes 4.6 je dňom ktorý sa v našej histórií zapíše ako začiatkom nášho príbehu. Dúfame že každému hráčovy sa bude u nás páčiť a užije si server na plno.
+          Tak nečakajte a začnite hrať na Trinity MC! 
+        </p>
+      </article>
+    </main>
+    <footer>
+      <div class="social-icons">
+        <a href="https://instagram.com/mctrinity1?igshid=MzRlODBiNWFlZA==" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@simplesclothing?_t=8crDwmY7PS7&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
+      </div>
+      <script src="https://kit.fontawesome.com/f0726da535.js" crossorigin="anonymous"></script>
+      <p>&copy; 2023 Trinity Global Inc. All rights reserved.</p>
+      <p>&copy; Made by d1vert</p>
+    </footer>
+  </body>
+</html>

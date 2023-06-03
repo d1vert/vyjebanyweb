@@ -1,0 +1,220 @@
+header {
+  background-color: #000;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.header-container {
+  text-align: center;
+  color: #fff;
+  z-index: 1;
+}
+
+h1 {
+  font-size: 6rem;
+  font-weight: 900;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  animation: slideInDown 1s ease;
+}
+
+p {
+  font-size: 2rem;
+  font-weight: 300;
+  margin: 0;
+  animation: slideInUp 1s ease;
+}
+
+header::before {
+  content: "";
+  background-image: url(your-background-image.jpg);
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  animation: zoomIn 10s ease;
+}
+
+@keyframes slideInDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Use a custom timing function */
+}
+
+.logo-container.active .logo {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.2);
+  transition: all 2s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Use the same timing function */
+}
+
+.tab-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.tab {
+  position: relative;
+  width: 200px;
+  height: 100px;
+  color: #007bff;
+  background-color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: 100px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.tab.active {
+  z-index: 1;
+}
+
+.tab:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  transform-origin: top center;
+  transform: scaleY(0);
+  transition: all 0.5s ease;
+}
+
+.tab.active:before {
+  transform: scaleY(1);
+}
+
+/* Custom CSS for red accents */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #f44336;
+  font-family: '.
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #f44336;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  p {
+    color: #333;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .section {
+    margin-bottom: 40px;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .section-content {
+    font-size: 1.2rem;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      padding: 10px;
+    }
+    
+    .section-title {
+      font-size: 1.5rem;
+    }
+    
+    .section-content {
+      font-size: 1rem;
+    }
+  }
+  

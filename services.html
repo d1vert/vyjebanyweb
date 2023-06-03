@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trinity - Dynmapa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+      /* Custom CSS */
+      body, html {
+        margin: 0;
+        padding: 0;
+        font-family: 'Roboto Mono', monospace;
+        background-color: #f0f0f0;
+        overflow: hidden;
+      }
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #923F2D;
+        padding: 1rem;
+        text-align: center;
+        color: #ffffff;
+        z-index: 999;
+        transition: opacity 0.3s;
+        opacity: 0;
+      }
+      header:hover {
+        opacity: 1;
+      }
+      nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+      }
+      nav a {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+        background-color: #923F2D;
+        padding: 0.5rem;
+        border-radius: 5px;
+      }
+      nav a:hover {
+        color: #000000;
+      }
+      main {
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+      iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+      footer {
+        position: fixed;
+        left: 0;
+        width: 100%;
+        background-color: #923F2D;
+        padding: 1rem;
+        text-align: center;
+        color: #ffffff;
+        bottom: 0;
+        transition: transform 0.3s;
+        z-index: 999;
+      }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      // Custom JavaScript
+      $(document).ready(function() {
+        $('header').on('mouseenter', function() {
+          $(this).addClass('show');
+        }).on('mouseleave', function() {
+          $(this).removeClass('show');
+        });
+      });
+    </script>
+      <script>
+        // Custom JavaScript
+        $(document).ready(function() {
+          $('nav a').on('click', function(e) {
+            e.preventDefault();
+            var target = $(this).attr('href');
+            if (target === 'about.html') {
+              window.location.href = 'https://platby.hostify.cz/92640';
+            } else {
+              $('main').removeClass('show');
+              setTimeout(function() {
+                window.location.href = target;
+              }, 500);
+            }
+          });
+          setTimeout(function() {
+            $('main').addClass('show');
+          }, 500);
+        });
+      </script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Domov</a></li>
+          <li><a href="about.html">VIP</a></li>
+          <li><a href="services.html">Dynmapa</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="ateam.html">Management</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <iframe src="http://parrot.hostify.cz:59842/" frameborder="0"></iframe>
+    </main>
+  </body>
+</html>

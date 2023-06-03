@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trinity - VIP</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Custom CSS */
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto Mono', monospace;
+      background-color: #f0f0f0;
+    }
+    header {
+      background-color: #923F2D;
+      padding: 1rem;
+    }
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-around;
+    }
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #000000;
+    }
+    main {
+      padding: 2rem;
+      opacity: 0;
+      transition: opacity 0.5s, transform 0.5s;
+      transform: translateX(100%);
+    }
+    main.show {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    footer {
+      background-color: #923F2D;
+      padding: 1rem;
+      text-align: center;
+      color: #ffffff;
+    }
+    .logo-container {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      margin: 0 auto;
+      transform: translateY(-50%);
+    }
+    .logo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 3rem;
+      font-weight: bold;
+      letter-spacing: 0.2rem;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+    .fade-slide-enter {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    .fade-slide-enter-active {
+      opacity: 1;
+      transform: translateX(0);
+      transition: opacity 0.5s, transform 0.5s;
+    }
+    .fade-slide-exit {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .fade-slide-exit-active {
+      opacity: 0;
+      transform: translateX(-100%);
+      transition: opacity 0.5s, transform 0.5s;
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    // Custom JavaScript
+    $(document).ready(function() {
+      $('nav a').on('click', function(e) {
+        e.preventDefault();
+        var target = $(this).attr('href');
+        if (target === 'about.html') {
+          window.location.href = 'https://platby.hostify.cz/92640';
+        } else {
+          $('main').removeClass('show');
+          setTimeout(function() {
+            window.location.href = target;
+          }, 500);
+        }
+      });
+      setTimeout(function() {
+        $('main').addClass('show');
+      }, 500);
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <h1 class="logo">Trinity</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Dynmapa</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="ateam.html">Management</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="fade-slide-enter">
+    <section id="about">
+      <h2>Welcome to Trinity</h2>
+      <p>This is the home page content.</p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2023 Trinity Global Inc. All rights reserved.</p>
+    <p>&copy; Made by d1vert</p>
+  </footer>
+</body>
+</html>
